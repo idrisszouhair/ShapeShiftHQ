@@ -1,0 +1,5 @@
+1. make working script for search bar of workout-plans ejs
+2. Create upload image system for the form of new sport category
+3. add these uploaded images in the database of sportlist for the sport categories and display the data
+4. make that the suggestions of new sport categories are waiting for approval ; send to the dev admin to validate or not
+5. add a "+" sign over the form for new sport category that disapears on click to make form appear

@@ -1,0 +1,34 @@
+<div class="workout-page-intro">
+    <h1> which type of sports training are you looking for ? </h1>
+    <a href="#sports-category"> browse <img class="arrow-down-btn" src="/img/arrow-down-btn.png" alt="downward arrow button"></a>
+</div>
+<div class="sports-category" id="sports-category">
+    <div class="search-wrapper">
+        <label for="search">Search Sports :</label>
+        <input type="search" id="search">
+    </div>
+    <div class="sport-block-wrapper">
+        <% if(sportlist.length > 0){                            %>
+        <%    for (var i = 0 ; i < sportlist.length; i++){      %>
+        <div class="sport-block">
+            <img src="" alt="">
+            <span id="sport_category_id"> 
+                <%- sportlist[i].id       %>
+            </span> 
+            <span class="sport-text"> 
+                <%- sportlist[i].sport    %>
+            </span>
+        </div>
+        <% }                                                    %>
+        <% } else {                                             %>
+                <h1>Data Not Found !</h1>
+        <% }                                                    %>
+        <div class="sport-block">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="text" placeholder="Sport Name" name="sport">
+                <input type="file" name="sportImage">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div> 
